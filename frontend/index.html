@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Shop | Catalogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="index.html">
+                <div class="brand-mark">N</div>
+                <div class="brand-copy">
+                    <h1>Northstar Shop</h1>
+                    <p>E-commerce portfolio ready</p>
+                </div>
+            </a>
+            <nav class="nav-links" data-auth-links></nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="shell hero-grid">
+                <article class="hero-panel hero-copy">
+                    <span class="eyebrow">Portfolio build</span>
+                    <h2>Tech essentials con look editorial y compra simple.</h2>
+                    <p>Una primera version seria de e-commerce full stack con JWT, carrito, ordenes, roles y panel admin. Pensado para mostrar criterio tecnico y presentacion visual a recruiters.</p>
+                    <div class="cta-row">
+                        <a class="btn" href="#catalog">Explorar productos</a>
+                        <a class="btn-outline" href="admin.html">Ver panel admin</a>
+                    </div>
+                </article>
+                <aside class="glass-card stats">
+                    <div class="stat-card">
+                        <strong>Spring Boot</strong>
+                        <span class="meta">Backend con capas limpias, JWT, validaciones y errores globales.</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>Responsive UI</strong>
+                        <span class="meta">Pantallas separadas para auth, catalogo, detalle, carrito, ordenes y admin.</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong data-user-name>Recruiter-ready</strong>
+                        <span class="meta">Deployable en Render con PostgreSQL en Neon y entorno configurable.</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="catalog">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <h3>Catalogo destacado</h3>
+                        <p id="catalogCount">Cargando productos...</p>
+                    </div>
+                    <div class="pill-row" id="categoryFilters"></div>
+                </div>
+                <div id="catalogMessage" class="message"></div>
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="shell">Northstar Shop. Proyecto portfolio de e-commerce full stack.</div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Shop | Ordenes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="index.html">
+                <div class="brand-mark">N</div>
+                <div class="brand-copy">
+                    <h1>Northstar Shop</h1>
+                    <p>Historial del usuario</p>
+                </div>
+            </a>
+            <nav class="nav-links" data-auth-links></nav>
+        </div>
+    </header>
+
+    <main class="orders-wrapper">
+        <div class="shell">
+            <div class="section-head">
+                <div>
+                    <h3>Mis ordenes</h3>
+                    <p>Resumen de compras confirmadas.</p>
+                </div>
+            </div>
+            <div id="ordersMessage" class="message"></div>
+            <section class="order-grid" id="ordersGrid"></section>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/orders.js"></script>
+</body>
+</html>

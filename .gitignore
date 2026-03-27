@@ -1,0 +1,6 @@
+backend/target/
+backend/.m2/
+.idea/
+.vscode/
+*.log
+*.class

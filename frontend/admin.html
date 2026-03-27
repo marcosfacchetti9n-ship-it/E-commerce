@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Shop | Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="index.html">
+                <div class="brand-mark">N</div>
+                <div class="brand-copy">
+                    <h1>Northstar Shop</h1>
+                    <p>Panel administrativo</p>
+                </div>
+            </a>
+            <nav class="nav-links" data-auth-links></nav>
+        </div>
+    </header>
+
+    <main class="admin-wrapper">
+        <div class="shell">
+            <div class="section-head">
+                <div>
+                    <h3>Panel admin</h3>
+                    <p>Alta y baja de categorias y productos para mostrar permisos por rol.</p>
+                </div>
+            </div>
+            <div id="adminMessage" class="message"></div>
+
+            <section class="admin-grid">
+                <article class="panel-card">
+                    <h4>Nueva categoria</h4>
+                    <form id="categoryForm" class="form-grid">
+                        <input id="categoryId" type="hidden">
+                        <div class="field">
+                            <label for="categoryName">Nombre</label>
+                            <input id="categoryName" required>
+                        </div>
+                        <div class="field">
+                            <label for="categoryDescription">Descripcion</label>
+                            <textarea id="categoryDescription" required></textarea>
+                        </div>
+                        <button class="btn" type="submit">Guardar categoria</button>
+                    </form>
+                </article>
+
+                <article class="panel-card">
+                    <h4>Nuevo producto</h4>
+                    <form id="productForm" class="form-grid">
+                        <input id="productId" type="hidden">
+                        <div class="field">
+                            <label for="productName">Nombre</label>
+                            <input id="productName" required>
+                        </div>
+                        <div class="field">
+                            <label for="productDescription">Descripcion</label>
+                            <textarea id="productDescription" required></textarea>
+                        </div>
+                        <div class="split-2">
+                            <div class="field">
+                                <label for="productPrice">Precio</label>
+                                <input id="productPrice" type="number" min="0.01" step="0.01" required>
+                            </div>
+                            <div class="field">
+                                <label for="productStock">Stock</label>
+                                <input id="productStock" type="number" min="0" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="productImageUrl">Image URL</label>
+                            <input id="productImageUrl" type="url" required>
+                        </div>
+                        <div class="field">
+                            <label for="productCategoryId">Categoria</label>
+                            <select id="productCategoryId" required></select>
+                        </div>
+                        <button class="btn" type="submit">Guardar producto</button>
+                    </form>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="product-grid">
+                    <article class="panel-card">
+                        <h4>Categorias</h4>
+                        <div class="table-shell">
+                            <table>
+                                <thead>
+                                    <tr><th>Nombre</th><th>Descripcion</th><th>Acciones</th></tr>
+                                </thead>
+                                <tbody id="adminCategories"></tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="panel-card">
+                        <h4>Productos</h4>
+                        <div class="table-shell">
+                            <table>
+                                <thead>
+                                    <tr><th>Nombre</th><th>Categoria</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+                                </thead>
+                                <tbody id="adminProducts"></tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

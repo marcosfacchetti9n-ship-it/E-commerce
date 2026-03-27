@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Shop | Auth</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="index.html">
+                <div class="brand-mark">N</div>
+                <div class="brand-copy">
+                    <h1>Northstar Shop</h1>
+                    <p>Acceso y registro</p>
+                </div>
+            </a>
+            <nav class="nav-links" data-auth-links></nav>
+        </div>
+    </header>
+
+    <main class="auth-wrapper">
+        <div class="shell">
+            <div id="authMessage" class="message"></div>
+            <div class="product-grid">
+                <section class="auth-card">
+                    <h2>Iniciar sesion</h2>
+                    <p class="helper-text">Usa el admin seed: admin@demo.com / Admin123.</p>
+                    <form id="loginForm" class="form-grid">
+                        <div class="field">
+                            <label for="loginEmail">Email</label>
+                            <input id="loginEmail" type="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="loginPassword">Password</label>
+                            <input id="loginPassword" type="password" required>
+                        </div>
+                        <button class="btn" type="submit">Ingresar</button>
+                    </form>
+                </section>
+
+                <section class="auth-card">
+                    <h2>Crear cuenta</h2>
+                    <p class="helper-text">Registro simple para probar el flujo completo del e-commerce.</p>
+                    <form id="registerForm" class="form-grid">
+                        <div class="split-2">
+                            <div class="field">
+                                <label for="firstName">Nombre</label>
+                                <input id="firstName" required>
+                            </div>
+                            <div class="field">
+                                <label for="lastName">Apellido</label>
+                                <input id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="registerEmail">Email</label>
+                            <input id="registerEmail" type="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="registerPassword">Password</label>
+                            <input id="registerPassword" type="password" minlength="6" required>
+                        </div>
+                        <button class="btn" type="submit">Registrarme</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
